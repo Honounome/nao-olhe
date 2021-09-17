@@ -7,4 +7,4 @@ Por exemplo: na pasta ```estrutura-de-dados/08-09-2021``` além do arquivo ```or
 
 Por favor acessem [esse](https://www.youtube.com/watch?v=dQw4w9WgXcQ) link para mais informações.
 
-Se quiserem dar sugestões ou relatar erros vcs podem acessar o menu [Issues](https://github.com/Honounome/nao-olhe/issues) e criar uma nova
+Se quiserem dar sugestões ou relatar erros vcs podem acessar o menu [Issues](https://github.com/Honounome/nao-olhe/issues) e criar uma nova issue.

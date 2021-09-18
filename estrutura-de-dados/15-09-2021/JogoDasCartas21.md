@@ -1,6 +1,5 @@
 ### Crie um jogo de 21 para duas pessoas (acho q é esse o comando)
-
-Não dá pra eu colocar observações por enquanto
+[linha 21](github.com/Honounome/nao-olhe/edit/main/estrutura-de-dados/15-09-2021/JogoDasCartas21.md#L21)
 
 ```java
 package vetor;

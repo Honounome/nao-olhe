@@ -2,9 +2,16 @@
 
 OBSERVAÇÕES:
 
-1. 
+1. Não tem como vocês usarem meu código diretamente porque ainda precisariam copiar exatamente o meu design e também porque o netbeans não deixa deletar algumas coisas (todo o código gerado automaticamente) quando tu tá fazendo um *jForm*, ao invés de copiar busquem entender a lógica do meu programa para que vocês possam adaptar ao programa de vocês.
+2. Esse é o construtor da classe, ele é chamado assim que o nosso programa inicia, podemos usar ele para fazer algumas configurações que só são necessárias quando o programa é iniciado, no meu caso essas configurações foram:
+    * ```initComponents()```: gerado pelo NetBeans e é responsável por traduzir tudo o que a gente faz na aba *design* em código de verdade;
+    * ```setResizable(false)```: fixa o tamanho da janela do meu programa, o que me permite ter mais controle sobre o design dele;
+    * ```painel.setOpaque(false)```: torna o objeto **painel** transparente, fiz isso para que a minha imagem de fundo pudesse aparecer;
+    * ```imgCarta(background, "background", "2")```: define a imagem **background (2)** como ícone do objeto **background**
+    * ```iniciar()```: método que eu mesmo criei, com algumas configurações adicionais. Eu separei essas configurações em um método porque elas são úteis para quando eu quiser reiniciar o programa, ou seja, configurações que não são necessárias só quando o programa é iniciado;
 
 ```java
+// OBS 1
 package vetor;
 
 import javax.swing.ImageIcon;
@@ -13,6 +20,7 @@ public class JogoDasCartas21 extends javax.swing.JFrame {
 
     private int mao1, mao2;
     
+    // OBS 2
     public JogoDasCartas21() {
         initComponents();
         setResizable(false);

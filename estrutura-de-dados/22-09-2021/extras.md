@@ -6,16 +6,16 @@ Por exemplo:
     
 * Se alguém colocasse números de diferentes tamanhos e eu tivesse colocado um simples `System.out.print(qst[i][j] + " ")` a saída ficaria tipo assim:
 
-  ![image](https://user-images.githubusercontent.com/80454712/134441975-066193f2-bae1-4b3f-8150-5ef11057c677.png)
+  ![uma matriz toda torta porque não foi formatada direito](https://user-images.githubusercontent.com/80454712/134441975-066193f2-bae1-4b3f-8150-5ef11057c677.png)
       
 * Todo mundo concorda que aquilo tá horrível né? Mal dá pra saber em que posição da matriz cada número está. Agora, se eu usar `System.out.printf(String.format("%%%dd", Integer.toString(maior).length()) + " ", qst1[i][j])` a saída usa o tamanho do maior número inserido para organizar a saída:
 
-  ![grgergerger](https://user-images.githubusercontent.com/80454712/134442303-c84502a1-fec5-4821-be00-2a9c33452588.png)   
+  ![uma matriz retinha porque o Wesley ajeitou ela](https://user-images.githubusercontent.com/80454712/134442303-c84502a1-fec5-4821-be00-2a9c33452588.png)   
   Confesso que não é a coisa mais bonita do mundo mas a simples organização já me agrada
 
 * Se eu quiser colocar zeros nos lugares vazios é só usar `System.out.printf(String.format("%%0%dd", Integer.toString(maior).length()) + " ", qst1[i][j])`:
 
-  ![image](https://user-images.githubusercontent.com/80454712/134442622-94730b28-2b7b-41a8-a1d5-1e7efd3d6b1f.png)   
+  ![uma matriz retinha cheia de zeros, ai meus olhos](https://user-images.githubusercontent.com/80454712/134442622-94730b28-2b7b-41a8-a1d5-1e7efd3d6b1f.png)   
   Não faço isso porque esse tanto de zeros me confunde muito
 
 **Como isso acontece?** Ótima pergunta meu caro, vou tentar explicar, caso tu se perca na explicação a culpa foi minha, não tenho boa didática:

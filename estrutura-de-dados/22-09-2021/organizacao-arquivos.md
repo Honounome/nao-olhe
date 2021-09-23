@@ -36,6 +36,7 @@ package matriz;
 import java.util.Scanner;
 
 public class MatrizExemplo {
+
     private double[][] notas = {{9.9, 5.9, 9.0}, {6.0, 4.9}};
 
     public double[][] getNotas() {
@@ -66,6 +67,7 @@ public class MatrizExemplo {
     public static void questao2() {...}
     
     public static void questao3() {...}
+    
 }
 
 ```

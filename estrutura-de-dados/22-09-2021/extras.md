@@ -25,3 +25,5 @@ Se você sabe como usar o printf deve saber também que para delimitar quanto es
 A questão é como fazer esse número variar? Depois de muitos testes consegui chegar àquela linha de código assustadora, o segredo está no `String.format("%%%dd", Integer.toString(maior).length())`, o *String.format()* é um jeito de formatar uma *String* sem ter que usar o *printf*, com esse método eu consigo fazer o número que fica entre o *%* e o *d* mudar, para que o *%* apareça é preciso colocar *%%* na formatação, então eu acrescento o *%d* para representar o número que eu quero que vá no meio e por fim acrescento um *d*, juntando tudo chegamos a *"%%%dd"*, o número que vai substituir o %d é `Integer.toString(maior).length()` que pode ser traduzido para *tamanho da variável **maior** transformada em String*, isso porque para pegar o tamanho do número ele precisa ser transformado em *String* primeiro.   
 
 E é basicamente isso, mudando o número que vai ali no meio baseado no maior número da matriz faz com que fique tudo organizadinho.
+
+### Imprimir matriz sem ter que usar outro *for*

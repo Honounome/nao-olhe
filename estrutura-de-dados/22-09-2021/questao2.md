@@ -3,7 +3,7 @@
 
 OBSERVAÇÕES:
 
-1. Essa questão é bem direta e simples de fazer, não tem muito o que comentar. Mas se vocês quiserem saber como eu imprimi a matriz sem ter que usar outro for podem clicar [aqui](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/22-09-2021/extras.md#imprimir-matriz-sem-ter-que-usar-outro-for)
+1. Essa questão é bem direta e simples de fazer, não tem muito o que comentar. Mas se vocês quiserem saber como eu imprimi a matriz sem ter que usar outro *for* podem clicar [aqui](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/22-09-2021/extras.md#imprimir-matriz-sem-ter-que-usar-outro-for)
 
 ```java
 public static void questao2() {

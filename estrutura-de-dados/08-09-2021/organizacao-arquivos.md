@@ -1,5 +1,7 @@
 ### Vetor.java
+
 ```java
+
 package vetor;
 import java.util.Scanner;
 
@@ -21,10 +23,16 @@ public class Vetor {
     }
     
 }
+
 ```
+
 ### VetorExemplo.java
-[questao1()](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/08-09-2021/questao-1.md) | [questao2()](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/08-09-2021/questao-2.md) | [questao3()](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/08-09-2021/questao-3.md) | [questao4()](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/08-09-2021/questao-4.md)
+
+|[questao1()](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/08-09-2021/questao-1.md)|[questao2()](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/08-09-2021/questao-2.md)|[questao3()](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/08-09-2021/questao-3.md)|[questao4()](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/08-09-2021/questao-4.md)|
+| --- | --- | --- | --- |
+
 ```java
+
 package vetor;
 import java.util.Scanner;
 
@@ -39,4 +47,5 @@ public class VetorExemplo {
     public static void questao4() {...}
 
 }
+
 ```

@@ -5,6 +5,7 @@ OBSERVAÇÕES:
 1. Nesse for eu faço duas coisas, peço para o usuário preencher a matriz e vou logo comparando os valores para ver qual é o maior, percebam que o primeiro *if* faz obriga a variável **maior** a receber o primeiro valor inserido e o outro *if* faz a comparação à medida que os valores vão sendo inseridos
 2. Aprenda a usar o *printf* imediatamente 😠. Eu sei que parece difícil, mas realmente não é, se vcs dedicarem 30 minutos estudando e testando no NetBeans já dá pra pegar o jeito, não tentem aprender tudo, se vcs aprenderem *%s*, *%c*, *%d* e *%f* já é um ótimo começo, depois vocês podem começar a aprender as coisas que realmente embelezam a saída
 3. Esse *for* serve para imprimir a matriz, a explicação de como essa linha de código funciona não é extremamente relevante, mas se vocês quiserem saber é só clicar [aqui](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/22-09-2021/extras.md#formatador-de-matriz-baseado-no-maior-número)
+4. Isso aqui é bacana, por que diabos tem um *return* aqui se o método *questao1()* é *void*? Pois é, dá pra fazer isso, nesses casos o *return* vai fazer a execução sair do método, de forma que qualquer ação depois do *return* não vai ser executada. E essa característica do *return* é o que me permitiu mostrar a mensagem de "Valor "X" não encontrado na matriz!" com facilidade, porque se o programa entrar na condição do *if* lá dentro, não importa quantos *print* eu colocar depois, eles não vão aparecer, já caso o programa não entrar no *if* quer dize que o valor não foi encontrado e a execução pode caminhar tranquilamente até aquele último *printf*
 
 ```java
 public static void questao1() {
@@ -31,7 +32,7 @@ public static void questao1() {
         // OBS 3
         for(int i=0; i<qst1.length; i++) {
             for(int j=0; j<qst1[i].length; j++) {
-                System.out.printf(String.format("%%%dd", Integer.toString(maior).length()) + " ", qst1[i][j]); // OBS 4
+                System.out.printf(String.format("%%%dd", Integer.toString(maior).length()) + " ", qst1[i][j]);
             }
             System.out.println();
         }
@@ -41,10 +42,10 @@ public static void questao1() {
             for(int j=0; j<qst1[i].length; j++) {
                 if(num==qst1[i][j]) {
                     System.out.printf("O valor %d está na posição [%d, %d]%n", num, i, j);
-                    return;
+                    return; // OBS 4
                 }
             }
         }
-        System.out.printf("Valor %d não encontrado na matriz%n", num);
+        System.out.printf("Valor %d não encontrado na matriz!%n", num);
     }
 ```

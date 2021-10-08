@@ -2,7 +2,7 @@
 
 OBSERVAÇÕES:
 
-1. Não tem como vocês usarem meu código diretamente porque ainda precisariam copiar exatamente o meu design e também porque o netbeans não deixa deletar algumas coisas (todo o código gerado automaticamente) quando tu tá fazendo um *jForm*, ao invés de copiar busquem entender a lógica do meu programa para que vocês possam adaptar ao programa de vocês.
+1. Não tem como vocês usarem meu código diretamente porque ainda precisariam copiar exatamente o meu design e também porque o netbeans não deixa deletar algumas coisas (todo o código gerado automaticamente) quando tu tá fazendo um *jForm*, ao invés de copiar busquem entender a lógica do meu programa para que vocês possam adaptar ao programa de vocês
 2. Esse é o construtor da classe, ele é chamado assim que o nosso programa inicia, podemos usar ele para fazer algumas configurações que só são necessárias quando o programa é iniciado, no meu caso essas configurações foram:
     * ```initComponents()```: gerado pelo NetBeans e é responsável por traduzir tudo o que a gente faz na aba *design* em código de verdade
     * ```setResizable(false)```: fixa o tamanho da janela do meu programa, o que me permite ter mais controle sobre o design dele
@@ -12,7 +12,7 @@ OBSERVAÇÕES:
 3. Código gerado automaticamente, aqui o NetBeans transforma o que tu fez na aba *design* em código de verdade
 4. Métodos de eventos dos botões de sacar, finalizar, pra controlar a caixa de texto (eu limitei o número de caracteres para ser no máximo 10) e pra reiniciar o jogo (percebam que no método do botão **reiniciar** eu chamo o método *iniciar()*)
 5. Esse método serve para resetar as coisas que são alteradas ao longo do jogo, como o valor das mãos e a pontuação
-6. Esse método é chamado quando qualquer um dos botões *Sacar* são clicados, "Mas como ele vai saber de qual jogador é o botão?" você me pergunta; "Pelos parâmetros" - eu respondo. Se tu se sente mais confortável em fazer um método diferente para cada botão, pode fazer, não tem problema em um projeto pequeno como esse.
+6. Esse método é chamado quando qualquer um dos botões *Sacar* são clicados, "Mas como ele vai saber de qual jogador é o botão?" você me pergunta; "Pelos parâmetros" - eu respondo. Se tu se sente mais confortável em fazer um método diferente para cada botão, pode fazer, não tem problema em um projeto pequeno como esse
 7. Qualquer carta maior que 10 dá 10 pontos também
 8. Aqui eu uso *if* pra ver qual mão escolher, eu não posso passar a mão como parâmetro porque se eu alterar o parâmetro, a variável global não muda de valor
 9. Esses *if* formatam o label que mostra a pontuação

@@ -62,11 +62,11 @@ public class MatrizExemplo {
         }
     }
     
-    public static void questao1() {...}
+    public static void questao1() {/* questao-1 */}
     
-    public static void questao2() {...}
+    public static void questao2() {/* questao-2 */}
     
-    public static void questao3() {...}
+    public static void questao3() {/* questao-3 */}
     
 }
 

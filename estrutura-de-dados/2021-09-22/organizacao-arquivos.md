@@ -27,7 +27,7 @@ public class Matriz {
 
 ### MatrizExemplo.java
 
-|[questao1()](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/22-09-2021/questao1.md)|[questao2()](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/22-09-2021/questao2.md)|[questao3()](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/22-09-2021/questao3.md)|
+|[questao-1](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/2021-09-22/questao-1.md)|[questao-2](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/2021-09-22/questao-2.md)|[questao-3](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/2021-09-22/questao-3.md)|
 | --- | --- | --- |
 
 ```java

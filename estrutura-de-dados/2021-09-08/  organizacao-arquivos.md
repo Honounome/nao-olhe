@@ -38,13 +38,13 @@ import java.util.Scanner;
 
 public class VetorExemplo {
 
-    public static void questao1() {...}
+    public static void questao1() {/* questao-1 */}
 
-    public static void questao2() {...}
+    public static void questao2() {/* questao-2 */}
 
-    public static void questao3() {...}
+    public static void questao3() {/* questao-3 */}
 
-    public static void questao4() {...}
+    public static void questao4() {/* questao-4 */}
 
 }
 

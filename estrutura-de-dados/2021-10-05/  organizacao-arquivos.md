@@ -1,4 +1,4 @@
-### Lista,java
+### Lista.java
 
 ```java
 
@@ -46,6 +46,9 @@ public class Lista {
 
 ### JavaExemplo.java
 
+| [questao-1](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/2021-10-05/questao-1.md) | [questao-2](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/2021-10-05/questao-2.md) | [questao-3](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/2021-10-05/questao-3.md) | [questao-4](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/2021-10-05/questao-4.md) | [questao-5](https://github.com/Honounome/nao-olhe/blob/main/estrutura-de-dados/2021-10-05/questao-5.md) |
+| --- | --- | --- | --- | --- |
+
 ```java
 
 package lista;
@@ -89,15 +92,15 @@ public class ListaExemplo {
         }
     }
 
-    public int insereElemento(int valor) {...}
+    public int insereElemento(int valor) {/* questao-1 */}
 
-    public void remover(int valor) {...}
+    public void remover(int valor) {/* questao-2 */}
 
-    public int consultarValor(int valor) {...}
+    public int consultarValor(int valor) {/* questao-3 */}
     
-    public int insereElemento(int[] valores) {...}
+    public int insereElemento(int[] valores) {/* questao-4 */}
     
-    public int insereElemento(int[] valores, int[] pos) {...}
+    public int insereElemento(int[] valores, int[] pos) {/* questao-5 */}
 
 }
 

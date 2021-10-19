@@ -2,7 +2,10 @@
 
 OBSERVAÇÕES:
 
-
+1. Essas 3 variáveis que declaro aqui em cima são essenciais para o funcionamento do meu código:
+    * **botoes**: Essa matriz guarda todos os botões, então posso acessar eles pela posição ao invés de ter que chamar o nome, essa variável é uma mão na roda, clicar num botão é muito fácil para o usuário, já a "CPU" sofre pra fazer isso. Em C++, nós podíamos usar ponteiros (mas eu acho que
+    * **pos**: 
+    * **posLnCol**: 
 
 ```java
 
@@ -10,7 +13,7 @@ package matriz;
 
 public class MatrizJogo extends javax.swing.JFrame {
 
-    boolean turnoCpu;
+    // OBS 1
     javax.swing.JButton[][] botoes;
     String[][] pos = new String[8][3];
     int[][][] posLnCol = {{{0,0}, {0,1}, {0,2}},
@@ -47,6 +50,11 @@ public class MatrizJogo extends javax.swing.JFrame {
         cpu();
     }                                       
 
+    private void botao02ActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        marcar(0, 2);
+        cpu();
+    }                                           
+
     private void botao10ActionPerformed(java.awt.event.ActionEvent evt) {                                        
         marcar(1, 0);
         cpu();
@@ -75,12 +83,7 @@ public class MatrizJogo extends javax.swing.JFrame {
     private void botao22ActionPerformed(java.awt.event.ActionEvent evt) {                                        
         marcar(2, 2);
         cpu();
-    }                                       
-
-    private void botao02ActionPerformed(java.awt.event.ActionEvent evt) {                                        
-        marcar(0, 2);
-        cpu();
-    }                                       
+    }                                   
 
     private void marcar(int ln, int col, String xo) {
         botoes[ln][col].setEnabled(false);

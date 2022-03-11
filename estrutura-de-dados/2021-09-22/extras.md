@@ -40,7 +40,7 @@ for(int i = 0; i < matriz.length; i++) {
         // aqui você coloca o código que põe alguma coisa dentro de matriz[i][j]
         
         // e então a matriz recebe ele, você pode formatar do jeito que quiser, esse aqui é o meu jeito
-        matriz += String.format("%d ", matriz[i][j];
+        matriz += String.format("%d ", matriz[i][j]);
     }
     // uma quebra de linha para poder mostrar corretamente as 2 dimensões da matriz
     matriz += "\n";

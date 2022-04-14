@@ -1,0 +1,344 @@
+/* CORPO */
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    color: #1c1c1c;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Asap, sans-serif;
+    color: #000000;
+}
+
+.botao {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #191970;
+    font-size: .9em;
+    border-radius: 3px;
+}
+
+
+/* NAVEGAÇÃO */
+
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: rgb(50, 0, 50); */
+    /* background-image: linear-gradient(to right, whitesmoke, rgb(185, 185, 185), whitesmoke); */
+    /* background-image: linear-gradient(to right, rgb(50, 0, 50), black, rgb(50, 0, 50)); */
+    background-image: linear-gradient(to right, black, rgb(50, 0, 50), black);
+}
+
+nav>a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 400;
+    font-size: 140%;
+    font-family: 'Stalinist One', cursive;
+    padding: 12px;
+    border-bottom: solid whitesmoke;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li {
+    text-align: center;
+    width: 100%;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10 10;
+    width: 100%;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.links {
+    background-image: linear-gradient(to right, black, rgb(50, 0, 50), black);
+}
+
+
+/* CABEÇALHO */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffffff;
+    text-align: left;
+    padding: 20px;
+}
+
+header div {
+    padding: 30px;
+}
+
+header img {
+    border-style: solid;
+    border-color: white;
+    width: 90%;
+}
+
+header h1 {
+    color: #ffffff;
+}
+
+header p {
+    margin-bottom: 2em;
+}
+
+header a {
+    text-decoration: none;
+    color: #2356ff;
+}
+
+header a:hover {
+    color: #ff8800;
+}
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 10px 20px 20px;
+    background-color: #191970;
+    color: #ffffff;
+}
+
+#sobre h2 {
+    color: #ffffff;
+}
+
+#sobre p {
+    margin-bottom: 2.5em;
+    max-width: 1000px;
+}
+
+#sobre .botao {
+    background-color: #f1f1f1;
+    color: #1c1c1c;
+}
+
+
+/* SERVIÇOS */
+
+#servicos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 30px;
+}
+
+#servicos div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px
+}
+
+#servicos img {
+    height: 100px;
+}
+
+
+/* CONTRATAR */
+
+#contratar {
+    color: white;
+    background-color: #075e54;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+#contratar h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+#contratar .botao {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: green;
+    font-size: .9em;
+    border-radius: 3px;
+}
+
+#contratar p {
+    text-align: center;
+}
+
+#contratar img {
+    height: 100px;
+}
+
+
+/* CONTATO */
+
+#contatos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+#contatos h2 {
+    color: #000000;
+}
+
+#contatos a {
+    text-decoration: none;
+    color: #2356ff;
+}
+
+#contatos a:hover {
+    color: #ff8800;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-image: linear-gradient(to right, black, rgb(50, 0, 50), black);
+    /* background-image: linear-gradient(to right, whitesmoke, rgb(185, 185, 185), whitesmoke); */
+    color: whitesmoke;
+}
+
+footer a {
+    text-decoration: none;
+    color: #2356ff;
+}
+
+footer a:hover {
+    color: #ff8800;
+}
+
+@media screen and (min-width: 768px) {
+
+    /* NAV */
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav>a {
+        font-size: 25px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        width: 70%;
+    }
+
+    /* CABEÇALHO */
+    header {
+        height: 600px;
+        height: 60vh;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    header img {
+        width: 50%;
+    }
+
+    /* SOBRE */
+    #sobre {
+        height: 250px;
+        height: 30vh;
+        justify-content: center;
+        min-height: 250px;
+    }
+
+    /* SERVICOS */
+    #servicos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #servicos h2 {
+        text-align: center;
+        width: 100%;
+    }
+
+    #servicos div {
+        flex-grow: 1;
+        flex-basis: 150px;
+        padding: 0 10px;
+    }
+
+    /* CONTRATAR */
+    #contratar {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #contratar h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    #contratar p {
+        text-align: center;
+    }
+
+    /* CONTATOS */
+    #contatos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 10px;
+    }
+
+    #contatos div div {
+        padding: 10px;
+    }
+
+    #contatos .linha {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        padding: 10px;
+    }
+
+    #contatos img {
+        height: 30px;
+    }
+
+    #contatos h2,
+    #contatos p {
+        width: 100%;
+    }
+}

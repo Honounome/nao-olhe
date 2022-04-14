@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Área</title>
+    <script>
+        function triangulo() {
+            var base = parseFloat(document.getElementById("base").value);
+            var alt = parseFloat(document.getElementById("alt").value);
+
+            if (base >= 0 && alt >= 0)
+                document.getElementById("res_tri").value = (base * alt) / 2;
+
+            if (base >= alt) {
+                document.getElementById("triangulo").style.borderWidth = "0 100px " + alt / base * 200 + "px 100px";
+            } else {
+                document.getElementById("triangulo").style.borderWidth = "0 " + base / alt * 100 + "px 200px " + base / alt * 100 + "px";
+            }
+        }
+        function quadrado() {
+            var lado = parseFloat(document.getElementById("lado").value);
+
+            if (lado >= 0)
+                document.getElementById("res_qua").value = lado * lado;
+        }
+    </script>
+    <style>
+        table {
+            margin: auto;
+        }
+
+        div {
+            width: 0;
+            height: 0;
+        }
+
+        #triangulo {
+            margin: auto;
+            border-width: 0 100px 200px 100px;
+            border-style: solid;
+            border-color: transparent;
+            border-bottom-color: yellow;
+        }
+
+        #quadrado {
+            border: 100px solid red;
+        }
+
+        #espaco {
+            height: 24px;
+        }
+
+        #base,
+        #alt,
+        #res_tri {
+            width: 142px;
+        }
+
+        #lado,
+        #res_qua {
+            width: 147px;
+        }
+
+        th {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <table border="1">
+            <tr>
+                <th>Triângulo</th>
+                <th>Quadrado</th>
+            </tr>
+            <tr>
+                <td>
+                    <div id="triangulo"></div>
+                </td>
+                <td>
+                    <div id="quadrado"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <td>Base:</td>
+                            <td><input type="number" id="base"></td>
+                        </tr>
+                        <tr>
+                            <td>Altura:</td>
+                            <td><input type="number" id="alt"></td>
+                        </tr>
+                        <tr align="center">
+                            <td colspan="2"><input type="button" value="Calcular área" onclick="triangulo()"></td>
+                        </tr>
+                        <tr id="espaco"></tr>
+                        <tr>
+                            <td>Área:</td>
+                            <td><input type="text" id="res_tri" readonly></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>Lado:</td>
+                            <td><input type="number" id="lado"></td>
+                        </tr>
+                        <tr id="espaco"></tr>
+                        <tr align="center">
+                            <td colspan="2"><input type="button" value="Calcular área" onclick="quadrado()"></td>
+                        </tr>
+                        <tr id="espaco"></tr>
+                        <tr>
+                            <td>Área:</td>
+                            <td><input type="text" id="res_qua" readonly></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <p align="center">Lembrando que não existem medidas negativas 🤨</p>
+    </form>
+</body>
+
+</html>

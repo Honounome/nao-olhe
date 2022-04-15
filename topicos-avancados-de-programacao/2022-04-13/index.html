@@ -7,18 +7,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Área</title>
     <script>
+    		
+    		  function formatoTri() {
+    		  				var base = parseFloat(document.getElementById("base").value);
+            var alt = parseFloat(document.getElementById("alt").value);
+            
+            if (base >= alt) {
+                document.getElementById("triangulo").style.borderWidth = "0 100px " + alt / base * 200 + "px 100px";
+            } else {
+                document.getElementById("triangulo").style.borderWidth = "0 " + base / alt * 100 + "px 200px " + base / alt * 100 + "px";
+            }
+    		  }
+    		  
+    		  function formatoQua() {
+    		  				if (parseFloat(document.getElementById("lado").value) == 0)
+    		  								document.getElementById("quadrado").style.borderWidth = "0";
+    		  				else
+																document.getElementById("quadrado").style.borderWidth = "100px";
+    		  }
+    		  
+    		  function formatoCir() {
+    		  				if (parseFloat(document.getElementById("raio").value) == 0)
+    		  								document.getElementById("circulo").style.borderWidth = "0";
+    		  				else
+																document.getElementById("circulo").style.borderWidth = "100px";
+    		  }
+    		  
+    		  function formatoTra() {
+    		  				var b_maior = parseFloat(document.getElementById("b_maior").value);
+        				var b_menor = parseFloat(document.getElementById("b_menor").value);
+        				var alt = parseFloat(document.getElementById("alt_tra").value)
+        				
+        				if (b_maior < b_menor) {
+        								var aux = b_maior;
+        								b_maior = b_menor;
+        								b_menor = aux;
+        				}
+        				
+        				if (alt >= b_maior) {
+        								document.getElementById("tra_qua").style.borderWidth = "100px " + b_menor / alt * 100 + "px 100px " + b_menor / alt * 100 + "px";
+        								document.getElementById("tra_tri").style.borderWidth = "100px " + (b_maior - b_menor) / alt * 100 + "px"/* 100px " + (b_maior - b_menor) / alt * 100 + "px"*/;
+        				} else {
+        								document.getElementById("tra_qua").style.borderWidth = alt / b_maior * 100 + "px " + b_menor / b_maior * 100 + "px";
+        								document.getElementById("tra_tri").style.borderWidth = alt / b_maior * 100 + "px " + (b_maior - b_menor) / b_maior * 100 + "px";
+        				}
+    		  }
+    		  
+    		  function formatoRet() {
+    		  				var base = parseFloat(document.getElementById("base_ret").value);
+            var alt = parseFloat(document.getElementById("alt_ret").value);
+            
+            if (base >= alt) {
+            				document.getElementById("retangulo").style.borderWidth = "100px " + alt / base * 100 + "px";
+            			}	else {
+            								document.getElementById("retangulo").style.borderWidth = base / alt * 100 + "px 100px";
+            				}
+    		  }
+    		  
         function triangulo() {
             var base = parseFloat(document.getElementById("base").value);
             var alt = parseFloat(document.getElementById("alt").value);
 
             if (base >= 0 && alt >= 0)
                 document.getElementById("res_tri").value = (base * alt) / 2;
-
-            if (base >= alt) {
-                document.getElementById("triangulo").style.borderWidth = "0 100px " + alt / base * 200 + "px 100px";
-            } else {
-                document.getElementById("triangulo").style.borderWidth = "0 " + base / alt * 100 + "px 200px " + base / alt * 100 + "px";
-            }
         }
         function quadrado() {
             var lado = parseFloat(document.getElementById("lado").value);
@@ -26,13 +77,41 @@
             if (lado >= 0)
                 document.getElementById("res_qua").value = lado * lado;
         }
+        
+        function circulo() {
+        				var raio = parseFloat(document.getElementById("raio").value);
+
+            if (raio >= 0)
+                document.getElementById("res_cir").value = raio * raio + "π";
+        }
+        
+        function trapezio() {
+        				var b_maior = parseFloat(document.getElementById("b_maior").value);
+        				var b_menor = parseFloat(document.getElementById("b_menor").value);
+        				var alt = parseFloat(document.getElementById("alt_tra").value)
+        				
+        				if (b_maior >= 0 && b_menor >= 0 && alt >= 0)
+        				document.getElementById("res_tra").value = (b_maior + b_menor) * alt / 2;
+        }
+        
+        function retangulo() {
+        				var base = parseFloat(document.getElementById("base_ret").value);
+            var alt = parseFloat(document.getElementById("alt_ret").value);
+
+            if (base >= 0 && alt >= 0)
+                document.getElementById("res_ret").value = base * alt;
+        }
     </script>
     <style>
+    		
         table {
             margin: auto;
         }
 
-        div {
+        #quadrado,
+        #triangulo,
+        #circulo,
+        #retangulo {
             width: 0;
             height: 0;
         }
@@ -43,10 +122,49 @@
             border-style: solid;
             border-color: transparent;
             border-bottom-color: yellow;
+            transition: border 0.5s;
         }
 
         #quadrado {
+        margin: auto;
             border: 100px solid red;
+            transition: border 0.5s;
+        }
+        
+        #circulo {
+        				margin: auto;
+        				border: 100px solid blue;
+        				border-radius: 200px;
+        				transition: border 0.5s;
+        }
+        
+        #trapezio {
+        				margin: auto;
+        				display: flex;
+        				flex-direction: row;
+        				align-items: center;
+        				width: fit-content;        				
+        }
+        
+        #tra_qua {
+        				border-width: 100px 50px 100px 50px;
+        				border-style: solid;
+        				border-color: green;
+        				transition: border 0.5s;
+        }
+        
+        #tra_tri {
+        				border-width: 100px 50px 100px 50px;
+        				border-style: solid;
+        				border-color: transparent transparent green green;
+        				transition: border 0.5s;
+        }
+        
+        #retangulo {
+        				margin: auto;
+        				border: 100px solid orange;
+        				border-width: 50px 100px;
+        				transition: border 0.5s;
         }
 
         #espaco {
@@ -63,19 +181,45 @@
         #res_qua {
             width: 147px;
         }
+        
+        #raio,
+        #res_cir {
+        				width: 147px;
+        }
+        
+        #b_menor,
+        #b_maior,
+        #alt_tra,
+        #res_tra {
+        				width: 129px;
+        }
+        
+        #base_ret,
+        #alt_ret,
+        #res_ret {
+        		width: 142px;
+        }
 
         th {
-            width: 200px;
+            min-width: 200px;
+        }
+        
+        #tabela {
+        				overflow-x: scroll;
         }
     </style>
 </head>
 
 <body>
     <form action="">
-        <table border="1">
+    		<div id="tabela">
+        <table id="tabela" border="1">
             <tr>
                 <th>Triângulo</th>
                 <th>Quadrado</th>
+                <th>Círculo</th>
+                <th>Trapézio</th>
+                <th>Retângulo</th>
             </tr>
             <tr>
                 <td>
@@ -84,17 +228,29 @@
                 <td>
                     <div id="quadrado"></div>
                 </td>
+                <td>
+                					<div id="circulo"></div>
+                </td>
+                <td>
+                				 <div id="trapezio">
+                				 				<div id="tra_qua"></div>
+                				 				<div id="tra_tri"></div>
+                				 </div>
+                </td>
+                <td>
+                				<div id="retangulo"></div>
+                </td>
             </tr>
             <tr>
                 <td>
                     <table>
                         <tr>
                             <td>Base:</td>
-                            <td><input type="number" id="base"></td>
+                            <td><input type="number" id="base" oninput="formatoTri()"></td>
                         </tr>
                         <tr>
                             <td>Altura:</td>
-                            <td><input type="number" id="alt"></td>
+                            <td><input type="number" id="alt" oninput="formatoTri()"></td>
                         </tr>
                         <tr align="center">
                             <td colspan="2"><input type="button" value="Calcular área" onclick="triangulo()"></td>
@@ -110,7 +266,7 @@
                     <table>
                         <tr>
                             <td>Lado:</td>
-                            <td><input type="number" id="lado"></td>
+                            <td><input type="number" id="lado" oninput="formatoQua()"></td>
                         </tr>
                         <tr id="espaco"></tr>
                         <tr align="center">
@@ -123,8 +279,69 @@
                         </tr>
                     </table>
                 </td>
+                <td>
+                					<table>
+                									<tr>
+                													<td>Raio:</td>
+                													<td><input type="number" id="raio" oninput="formatoCir()"></td>
+                									</tr>
+                								 <tr id="espaco"></tr>
+                								 <tr align="center">
+                								 				<td colspan="2"><input type="button" value="Calcular área" onclick="circulo()"></td>
+                								 </tr>
+                								 <tr id="espaco"></tr>
+                								 <tr>
+                								 				<td>Área:</td>
+                								 				<td><input type="text" id="res_cir" readonly></td>
+                								 </tr>
+                					</table>
+                </td>
+                <td>
+                				 <table>
+                				 				<tr>
+                				 								<td>Base 1:</td>
+                				 								<td><input type="number" id="b_menor" oninput="formatoTra()"></td>
+                				 				</tr>
+                				 				<tr>
+                				 								<td>Base 2:</td>
+                				 								<td><input type="number" id="b_maior" oninput="formatoTra()"></td>
+                				 				</tr>
+                				 				<tr>
+                				 								<td>Altura:</td>
+                				 								<td><input type="number" id="alt_tra" oninput="formatoTra()"></td>
+                				 				</tr>
+                				 				<tr align="center">
+                				 								<td colspan="2"><input type="button" value="Calcular área" onclick="trapezio()"></td>
+                				 				</tr>
+                				 				<tr>
+                				 								<td>Área:</td>
+                				 								<td><input type="text" id="res_tra" readonly></td>
+                				 				</tr>
+                				 </table>
+                </td>
+                <td>
+                				<table>
+                        <tr>
+                            <td>Base:</td>
+                            <td><input type="number" id="base_ret" oninput="formatoRet()"></td>
+                        </tr>
+                        <tr>
+                            <td>Altura:</td>
+                            <td><input type="number" id="alt_ret" oninput="formatoRet()"></td>
+                        </tr>
+                        <tr align="center">
+                            <td colspan="2"><input type="button" value="Calcular área" onclick="retangulo()"></td>
+                        </tr>
+                        <tr id="espaco"></tr>
+                        <tr>
+                            <td>Área:</td>
+                            <td><input type="text" id="res_ret" readonly></td>
+                        </tr>
+                    </table>
+                </td>
             </tr>
         </table>
+        </div>
         <p align="center">Lembrando que não existem medidas negativas 🤨</p>
     </form>
 </body>

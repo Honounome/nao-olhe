@@ -76,7 +76,7 @@ input[type=number] {
 th {
   max-width: 205px;
   min-width: 205px;
-  width: 100%;
+  width: 205px;
 }
 
 #tabela {

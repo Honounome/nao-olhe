@@ -1,111 +1,88 @@
 table {
-    margin: auto;
+  margin: auto;
 }
 
 #quadrado,
 #triangulo,
 #circulo,
+#tra_qua,
+#tra_tri,
 #retangulo {
-    width: 0;
-    height: 0;
+  width: 0;
+  height: 0;
 }
 
 #triangulo {
-    margin: auto;
-    border-width: 0 100px 200px 100px;
-    border-style: solid;
-    border-color: transparent;
-    border-bottom-color: yellow;
-    transition: border 0.5s;
+  margin: auto;
+  border-width: 0 100px 200px 100px;
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-color: yellow;
+  transition: border 0.5s;
 }
 
 #quadrado {
-    margin: auto;
-    border: 100px solid red;
-    transition: border 0.5s;
+  margin: auto;
+  border: 100px solid red;
+  transition: border 0.5s;
 }
 
 #circulo {
-    margin: auto;
-    border: 100px solid blue;
-    border-radius: 200px;
-    transition: border 0.5s;
+  margin: auto;
+  border: 100px solid blue;
+  border-radius: 200px;
+  transition: border 0.5s;
 }
 
 #trapezio {
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: min-content;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: min-content;
 }
 
 #tra_qua {
-    width: 0;
-    height: 0;
-    border-width: 100px 50px 100px 50px;
-    border-style: solid;
-    border-color: green;
-    transition: border 0.5s;
+  width: 0;
+  height: 0;
+  border-width: 100px 50px 100px 50px;
+  border-style: solid;
+  border-color: green;
+  transition: border 0.5s;
 }
 
 #tra_tri {
-    width: 0;
-    height: 0;
-    border-width: 100px 50px 100px 50px;
-    border-style: solid;
-    border-color: transparent transparent green green;
-    transition: border 0.5s;
+  width: 0;
+  height: 0;
+  border-width: 100px 50px 100px 50px;
+  border-style: solid;
+  border-color: transparent transparent green green;
+  transition: border 0.5s;
 }
 
 #retangulo {
-    margin: auto;
-    border: 100px solid orange;
-    border-width: 50px 100px;
-    transition: border 0.5s;
+  margin: auto;
+  border: 100px solid orange;
+  border-width: 50px 100px;
+  transition: border 0.5s;
 }
 
-#espaco {
-    height: 24px;
-}
-
-#base,
-#alt,
-#res_tri {
-    width: 142px;
-}
-
-#lado,
-#res_qua {
-    width: 147px;
-}
-
-#raio,
-#res_cir {
-    width: 147px;
-}
-
-#b_menor,
-#b_maior,
-#alt_tra,
-#res_tra {
-    width: 129px;
-}
-
-#base_ret,
-#alt_ret,
-#res_ret {
-    width: 142px;
+input[type=text],
+input[type=number] {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 th {
-    min-width: 205px;
+  max-width: 205px;
+  min-width: 205px;
+  width: 100%;
 }
 
 #tabela {
-    overflow-x: scroll;
+  overflow-x: scroll;
 }
 
 #formas {
-    height: 209px;
+  height: 209px;
 }

@@ -1,149 +1,149 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <title>Calculadora de Área</title>
-</head>
+  </head>
 
-<body>
+  <body onload="tamanho()">
     <form action="">
-        <div id="tabela">
-            <table id="tabela" border="1">
+      <div id="tabela">
+        <table id="tabela" border="1">
+          <tr>
+            <th>Triângulo</th>
+            <th>Quadrado</th>
+            <th>Círculo</th>
+            <th>Trapézio</th>
+            <th>Retângulo</th>
+          </tr>
+          <tr id="formas">
+            <td>
+              <div id="triangulo"></div>
+            </td>
+            <td>
+              <div id="quadrado"></div>
+            </td>
+            <td>
+              <div id="circulo"></div>
+            </td>
+            <td>
+              <div id="trapezio">
+                <div id="tra_qua"></div>
+                <div id="tra_tri"></div>
+              </div>
+            </td>
+            <td>
+              <div id="retangulo"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table>
                 <tr>
-                    <th>Triângulo</th>
-                    <th>Quadrado</th>
-                    <th>Círculo</th>
-                    <th>Trapézio</th>
-                    <th>Retângulo</th>
-                </tr>
-                <tr id="formas">
-                    <td>
-                        <div id="triangulo"></div>
-                    </td>
-                    <td>
-                        <div id="quadrado"></div>
-                    </td>
-                    <td>
-                        <div id="circulo"></div>
-                    </td>
-                    <td>
-                        <div id="trapezio">
-                            <div id="tra_qua"></div>
-                            <div id="tra_tri"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div id="retangulo"></div>
-                    </td>
+                  <td>Base:</td>
+                  <td><input type="number" id="base" oninput="formatoTri()"></td>
                 </tr>
                 <tr>
-                    <td>
-                        <table>
-                            <tr>
-                                <td>Base:</td>
-                                <td><input type="number" id="base" oninput="formatoTri()"></td>
-                            </tr>
-                            <tr>
-                                <td>Altura:</td>
-                                <td><input type="number" id="alt" oninput="formatoTri()"></td>
-                            </tr>
-                            <tr align="center">
-                                <td colspan="2"><input type="button" value="Calcular área" onclick="triangulo()"></td>
-                            </tr>
-                            <tr id="espaco"></tr>
-                            <tr>
-                                <td>Área:</td>
-                                <td><input type="text" id="res_tri" readonly></td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td>
-                        <table>
-                            <tr>
-                                <td>Lado:</td>
-                                <td><input type="number" id="lado" oninput="formatoQua()"></td>
-                            </tr>
-                            <tr id="espaco"></tr>
-                            <tr align="center">
-                                <td colspan="2"><input type="button" value="Calcular área" onclick="quadrado()"></td>
-                            </tr>
-                            <tr id="espaco"></tr>
-                            <tr>
-                                <td>Área:</td>
-                                <td><input type="text" id="res_qua" readonly></td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td>
-                        <table>
-                            <tr>
-                                <td>Raio:</td>
-                                <td><input type="number" id="raio" oninput="formatoCir()"></td>
-                            </tr>
-                            <tr id="espaco"></tr>
-                            <tr align="center">
-                                <td colspan="2"><input type="button" value="Calcular área" onclick="circulo()"></td>
-                            </tr>
-                            <tr id="espaco"></tr>
-                            <tr>
-                                <td>Área:</td>
-                                <td><input type="text" id="res_cir" readonly></td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td>
-                        <table>
-                            <tr>
-                                <td>Base 1:</td>
-                                <td><input type="number" id="b_menor" oninput="formatoTra()"></td>
-                            </tr>
-                            <tr>
-                                <td>Base 2:</td>
-                                <td><input type="number" id="b_maior" oninput="formatoTra()"></td>
-                            </tr>
-                            <tr>
-                                <td>Altura:</td>
-                                <td><input type="number" id="alt_tra" oninput="formatoTra()"></td>
-                            </tr>
-                            <tr align="center">
-                                <td colspan="2"><input type="button" value="Calcular área" onclick="trapezio()"></td>
-                            </tr>
-                            <tr>
-                                <td>Área:</td>
-                                <td><input type="text" id="res_tra" readonly></td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td>
-                        <table>
-                            <tr>
-                                <td>Base:</td>
-                                <td><input type="number" id="base_ret" oninput="formatoRet()"></td>
-                            </tr>
-                            <tr>
-                                <td>Altura:</td>
-                                <td><input type="number" id="alt_ret" oninput="formatoRet()"></td>
-                            </tr>
-                            <tr align="center">
-                                <td colspan="2"><input type="button" value="Calcular área" onclick="retangulo()"></td>
-                            </tr>
-                            <tr id="espaco"></tr>
-                            <tr>
-                                <td>Área:</td>
-                                <td><input type="text" id="res_ret" readonly></td>
-                            </tr>
-                        </table>
-                    </td>
+                  <td>Altura:</td>
+                  <td><input type="number" id="alt" oninput="formatoTri()"></td>
                 </tr>
-            </table>
-        </div>
-        <p align="center">Lembrando que não existem medidas negativas 🤨</p>
+                <tr class="espaco"></tr>
+                <tr align="center">
+                  <td colspan="2"><input type="button" value="Calcular área" onclick="triangulo()"></td>
+                </tr>
+                <tr>
+                  <td>Área:</td>
+                  <td><input type="text" id="res_tri" readonly></td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <td>Lado:</td>
+                  <td><input type="number" id="lado" oninput="formatoQua()"></td>
+                </tr>
+                <tr class="espaco"></tr>
+                <tr class="espaco"></tr>
+                <tr align="center">
+                  <td colspan="2"><input type="button" value="Calcular área" onclick="quadrado()"></td>
+                </tr>
+                <tr>
+                  <td>Área:</td>
+                  <td><input type="text" id="res_qua" readonly></td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <td>Raio:</td>
+                  <td><input type="number" id="raio" oninput="formatoCir()"></td>
+                </tr>
+                <tr class="espaco"></tr>
+                <tr class="espaco"></tr>
+                <tr align="center">
+                  <td colspan="2"><input type="button" value="Calcular área" onclick="circulo()"></td>
+                </tr>
+                <tr>
+                  <td>Área:</td>
+                  <td><input type="text" id="res_cir" readonly></td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <td>Base&nbsp;1:</td>
+                  <td><input type="number" id="b_menor" oninput="formatoTra()"></td>
+                </tr>
+                <tr>
+                  <td>Base&nbsp;2:</td>
+                  <td><input type="number" id="b_maior" oninput="formatoTra()"></td>
+                </tr>
+                <tr>
+                  <td>Altura:</td>
+                  <td><input type="number" id="alt_tra" oninput="formatoTra()"></td>
+                </tr>
+                <tr align="center">
+                  <td colspan="2"><input type="button" value="Calcular área" onclick="trapezio()"></td>
+                </tr>
+                <tr>
+                  <td>Área:</td>
+                  <td><input type="text" id="res_tra" readonly></td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <td>Base:</td>
+                  <td><input type="number" id="base_ret" oninput="formatoRet()"></td>
+                </tr>
+                <tr>
+                  <td>Altura:</td>
+                  <td><input type="number" id="alt_ret" oninput="formatoRet()"></td>
+                </tr>
+                <tr class="espaco"></tr>
+                <tr align="center">
+                  <td colspan="2"><input type="button" value="Calcular área" onclick="retangulo()"></td>
+                </tr>
+                <tr>
+                  <td>Área:</td>
+                  <td><input type="text" id="res_ret" readonly></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <p align="center">Lembrando que não existem medidas negativas 🤨</p>
     </form>
-</body>
+  </body>
 
 </html>

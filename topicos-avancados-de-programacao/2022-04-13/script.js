@@ -1,7 +1,7 @@
 function tamanho() {
   var espacos = document.getElementsByClassName("espaco");
   for (var i = 0; i < espacos.length; i++)
-    espacos[i].style.height = document.querySelector('#base').offsetHeight + 4 + 'px';
+    espacos[i].style.height = document.querySelector('#base').offsetHeight + 2 + 'px';
 }
 
 function formatoTri() {

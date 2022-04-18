@@ -1,6 +1,4 @@
-table {
-  margin: auto;
-}
+/* FORMAS */
 
 #quadrado,
 #triangulo,
@@ -30,7 +28,7 @@ table {
 #circulo {
   margin: auto;
   border: 100px solid blue;
-  border-radius: 200px;
+  border-radius: 100px;
   transition: border 0.5s;
 }
 
@@ -67,10 +65,16 @@ table {
   transition: border 0.5s;
 }
 
+/* FORMATAÇÕES ESPECÍFICAS */
+
 input[type=text],
 input[type=number] {
   width: 100%;
   box-sizing: border-box;
+}
+
+table {
+  margin: auto;
 }
 
 th {

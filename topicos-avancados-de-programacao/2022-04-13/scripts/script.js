@@ -1,9 +1,11 @@
+// FORMATAÇÃO
 function tamanho() {
   var espacos = document.getElementsByClassName("espaco");
   for (var i = 0; i < espacos.length; i++)
     espacos[i].style.height = document.querySelector('#base').offsetHeight + 2 + 'px';
 }
 
+// FUNÇÕES DE FORMATO
 function formatoTri() {
   var base = parseFloat(document.getElementById("base").value);
   var alt = parseFloat(document.getElementById("alt").value);
@@ -38,7 +40,7 @@ function formatoTra() {
   var b_menor = parseFloat(document.getElementById("b_menor").value);
   var alt = parseFloat(document.getElementById("alt_tra").value)
 
-  if (b_maior <= b_menor) {
+  if (b_maior < b_menor) {
     var aux = b_maior;
     b_maior = b_menor;
     b_menor = aux;
@@ -74,6 +76,7 @@ function formatoRet() {
     document.getElementById("retangulo").style.borderWidth = alt / base * 100 + "px 100px";
 }
 
+// FUNÇÕES DE CÁLCULO
 function triangulo() {
   var base = parseFloat(document.getElementById("base").value);
   var alt = parseFloat(document.getElementById("alt").value);

@@ -5,23 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Calculadora de Área</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/script.js"></script>
+    <title>Wesley Sousa - Calculadora de Área</title>
   </head>
 
   <body onload="tamanho()">
     <form action="">
       <div id="tabela">
         <table id="tabela" border="1">
-          <tr>
+          <tr> <!-- TÍTULOS -->
             <th>Triângulo</th>
             <th>Quadrado</th>
             <th>Círculo</th>
             <th>Trapézio</th>
             <th>Retângulo</th>
-          </tr>
-          <tr id="formas">
+          </tr> <!-- /TÍTULOS -->
+          
+          <tr id="formas"> <!-- FORMAS -->
             <td>
               <div id="triangulo"></div>
             </td>
@@ -40,11 +41,12 @@
             <td>
               <div id="retangulo"></div>
             </td>
-          </tr>
-          <tr>
-            <td>
-              <table>
-                <tr>
+          </tr> <!-- /FORMAS -->
+          
+          <tr> <!-- FORMULÁRIOS -->
+            <td> 
+              <table> <!-- TRIÂNGULO -->
+                <tr> 
                   <td>Base:</td>
                   <td><input type="number" id="base" oninput="formatoTri()"></td>
                 </tr>
@@ -60,10 +62,11 @@
                   <td>Área:</td>
                   <td><input type="text" id="res_tri" readonly></td>
                 </tr>
-              </table>
+              </table> <!-- /TRIÂNGULO -->
             </td>
+            
             <td>
-              <table>
+              <table> <!-- QUADRADO -->
                 <tr>
                   <td>Lado:</td>
                   <td><input type="number" id="lado" oninput="formatoQua()"></td>
@@ -77,10 +80,11 @@
                   <td>Área:</td>
                   <td><input type="text" id="res_qua" readonly></td>
                 </tr>
-              </table>
+              </table> <!-- /QUADRADO -->
             </td>
+            
             <td>
-              <table>
+              <table> <!-- CÍRCULO -->
                 <tr>
                   <td>Raio:</td>
                   <td><input type="number" id="raio" oninput="formatoCir()"></td>
@@ -94,10 +98,11 @@
                   <td>Área:</td>
                   <td><input type="text" id="res_cir" readonly></td>
                 </tr>
-              </table>
+              </table> <!-- /CÍRCULO -->
             </td>
+            
             <td>
-              <table>
+              <table> <!-- TRAPÉZIO -->
                 <tr>
                   <td>Base&nbsp;1:</td>
                   <td><input type="number" id="b_menor" oninput="formatoTra()"></td>
@@ -117,10 +122,11 @@
                   <td>Área:</td>
                   <td><input type="text" id="res_tra" readonly></td>
                 </tr>
-              </table>
+              </table> <!-- /TRAPÉZIO -->
             </td>
+            
             <td>
-              <table>
+              <table> <!-- RETÂNGULO -->
                 <tr>
                   <td>Base:</td>
                   <td><input type="number" id="base_ret" oninput="formatoRet()"></td>
@@ -137,9 +143,9 @@
                   <td>Área:</td>
                   <td><input type="text" id="res_ret" readonly></td>
                 </tr>
-              </table>
+              </table> <!-- /RETÂNGULO -->
             </td>
-          </tr>
+          </tr> <!-- /FORMULÁRIOS -->
         </table>
       </div>
       <p align="center">Lembrando que não existem medidas negativas 🤨</p>

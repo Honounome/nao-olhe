@@ -8,28 +8,23 @@
 #retangulo {
   width: 0;
   height: 0;
+  margin: auto;
+  transition: border 0.5s;
 }
 
 #triangulo {
-  margin: auto;
   border-width: 0 100px 200px 100px;
   border-style: solid;
-  border-color: transparent;
-  border-bottom-color: yellow;
-  transition: border 0.5s;
+  border-color: yellow transparent;
 }
 
 #quadrado {
-  margin: auto;
   border: 100px solid red;
-  transition: border 0.5s;
 }
 
 #circulo {
-  margin: auto;
   border: 100px solid blue;
   border-radius: 100px;
-  transition: border 0.5s;
 }
 
 #trapezio {
@@ -41,28 +36,20 @@
 }
 
 #tra_qua {
-  width: 0;
-  height: 0;
-  border-width: 100px 50px 100px 50px;
+  border-width: 100px 50px;
   border-style: solid;
   border-color: green;
-  transition: border 0.5s;
 }
 
 #tra_tri {
-  width: 0;
-  height: 0;
-  border-width: 100px 50px 100px 50px;
+  border-width: 100px 50px;
   border-style: solid;
   border-color: transparent transparent green green;
-  transition: border 0.5s;
 }
 
 #retangulo {
-  margin: auto;
   border: 100px solid orange;
   border-width: 50px 100px;
-  transition: border 0.5s;
 }
 
 /* FORMATAÇÕES ESPECÍFICAS */
@@ -78,7 +65,6 @@ table {
 }
 
 th {
-  max-width: 205px;
   min-width: 205px;
   width: 205px;
 }
@@ -89,4 +75,20 @@ th {
 
 #formas {
   height: 209px;
+}
+
+p {
+    text-align: center;
+}
+
+input[type=button] {
+    display: block;
+    margin: auto;
+}
+
+input[type=text] {
+    background-color: #ddd;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
 }

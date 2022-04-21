@@ -100,7 +100,7 @@ function circulo() {
   var raio = parseFloat(document.getElementById("raio").value);
 
   if (raio >= 0)
-    document.getElementById("res_cir").value = raio * raio + (raio != 0 ? "π" : "");
+    document.getElementById("res_cir").value = raio * raio * 3.14;
   else
     document.getElementById("res_cir").value = "";
 }

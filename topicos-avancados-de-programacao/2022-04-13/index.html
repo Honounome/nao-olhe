@@ -12,7 +12,6 @@
 
   <body onload="tamanho()">
     <form action="">
-      <div id="tabela">
         <table id="tabela" border="1">
           <tr> <!-- TÍTULOS -->
             <th>Triângulo</th>
@@ -55,7 +54,7 @@
                   <td><input type="number" id="alt" oninput="formatoTri()"></td>
                 </tr>
                 <tr class="espaco"></tr>
-                <tr align="center">
+                <tr>
                   <td colspan="2"><input type="button" value="Calcular área" onclick="triangulo()"></td>
                 </tr>
                 <tr>
@@ -73,7 +72,7 @@
                 </tr>
                 <tr class="espaco"></tr>
                 <tr class="espaco"></tr>
-                <tr align="center">
+                <tr>
                   <td colspan="2"><input type="button" value="Calcular área" onclick="quadrado()"></td>
                 </tr>
                 <tr>
@@ -91,7 +90,7 @@
                 </tr>
                 <tr class="espaco"></tr>
                 <tr class="espaco"></tr>
-                <tr align="center">
+                <tr>
                   <td colspan="2"><input type="button" value="Calcular área" onclick="circulo()"></td>
                 </tr>
                 <tr>
@@ -115,7 +114,7 @@
                   <td>Altura:</td>
                   <td><input type="number" id="alt_tra" oninput="formatoTra()"></td>
                 </tr>
-                <tr align="center">
+                <tr>
                   <td colspan="2"><input type="button" value="Calcular área" onclick="trapezio()"></td>
                 </tr>
                 <tr>
@@ -136,7 +135,7 @@
                   <td><input type="number" id="alt_ret" oninput="formatoRet()"></td>
                 </tr>
                 <tr class="espaco"></tr>
-                <tr align="center">
+                <tr>
                   <td colspan="2"><input type="button" value="Calcular área" onclick="retangulo()"></td>
                 </tr>
                 <tr>
@@ -147,8 +146,7 @@
             </td>
           </tr> <!-- /FORMULÁRIOS -->
         </table>
-      </div>
-      <p align="center">Lembrando que não existem medidas negativas 🤨</p>
+      <p>Lembrando que não existem medidas negativas 🤨</p>
     </form>
   </body>
 

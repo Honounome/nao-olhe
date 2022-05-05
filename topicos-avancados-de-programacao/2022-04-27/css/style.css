@@ -1,0 +1,37 @@
+body {
+    background-color: #E6E6FB;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    padding: 5px;
+}
+
+hr {
+    border: none;
+    background-color: #753A4F;
+    height: 2px;
+}
+
+button {
+    color: white;
+    background-color: darkblue;
+}
+
+.qtd {
+    width: 40px;
+}
+
+.num,
+.sub {
+    width: 150px;
+}
+
+.sub {
+    border: 1px solid #DBD9E2;
+    background-color: #F0F0F0;
+    color: dimgray;
+}

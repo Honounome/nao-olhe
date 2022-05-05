@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/script.js"></script>
+    <title>Sistema de Lanchonete - Wesley</title>
+</head>
+
+<body>
+    <h3>Comanda do cliente:</h3>
+    <form>
+        <table border="1">
+            <tr>
+                <th>#</th>
+                <th>Descrição</th>
+                <th>Qtd.</th>
+                <th>Preço</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>
+                    <select id="slc1" class="slc">
+                        <option value=""></option>
+                        <option value="X-tudo">X-Tudo</option>
+                        <option value="X-Calabresa">X-Calabresa</option>
+                        <option value="X-Bacon">X-Bacon</option>
+                        <option value="Cachorro Quente">Cachorro Quente</option>
+                        <option value="Hamburguer">Hambúrguer</option>
+                        <option value="Misto">Misto</option>
+                    </select>
+                </td>
+                <td><input type="number" min="0" id="numQtd1" class="qtd"
+                        onblur="calcSub('numQtd1', 'numPreco1', 'numSub1')"></td>
+                <td><input type="number" min="0" id="numPreco1" class="num"
+                        onblur="calcSub('numQtd1', 'numPreco1', 'numSub1')"></td>
+                <td><input type="number" id="numSub1" class="sub" readonly></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>
+                    <select id="slc2" class="slc">
+                        <option value=""></option>
+                        <option value="X-tudo">X-Tudo</option>
+                        <option value="X-Calabresa">X-Calabresa</option>
+                        <option value="X-Bacon">X-Bacon</option>
+                        <option value="Cachorro Quente">Cachorro Quente</option>
+                        <option value="Hamburguer">Hambúrguer</option>
+                        <option value="Misto">Misto</option>
+                    </select>
+                </td>
+                <td><input type="number" min="0" id="numQtd2" class="qtd"
+                        onblur="calcSub('numQtd2', 'numPreco2', 'numSub2')"></td>
+                <td><input type="number" min="0" id="numPreco2" class="num"
+                        onblur="calcSub('numQtd2', 'numPreco2', 'numSub2')"></td>
+                <td><input type="number" id="numSub2" class="sub" readonly></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>
+                    <select id="slc3" class="slc">
+                        <option value=""></option>
+                        <option value="X-tudo">X-Tudo</option>
+                        <option value="X-Calabresa">X-Calabresa</option>
+                        <option value="X-Bacon">X-Bacon</option>
+                        <option value="Cachorro Quente">Cachorro Quente</option>
+                        <option value="Hamburguer">Hambúrguer</option>
+                        <option value="Misto">Misto</option>
+                    </select>
+                </td>
+                <td><input type="number" min="0" id="numQtd3" class="qtd"
+                        onblur="calcSub('numQtd3', 'numPreco3', 'numSub3')"></td>
+                <td><input type="number" min="0" id="numPreco3" class="num"
+                        onblur="calcSub('numQtd3', 'numPreco3', 'numSub3')"></td>
+                <td><input type="number" id="numSub3" class="sub" readonly></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>
+                    <select id="slc4" class="slc">
+                        <option value=""></option>
+                        <option value="X-tudo">X-Tudo</option>
+                        <option value="X-Calabresa">X-Calabresa</option>
+                        <option value="X-Bacon">X-Bacon</option>
+                        <option value="Cachorro Quente">Cachorro Quente</option>
+                        <option value="Hamburguer">Hambúrguer</option>
+                        <option value="Misto">Misto</option>
+                    </select>
+                </td>
+                <td><input type="number" min="0" id="numQtd4" class="qtd"
+                        onblur="calcSub('numQtd4', 'numPreco4', 'numSub4')"></td>
+                <td><input type="number" min="0" id="numPreco4" class="num"
+                        onblur="calcSub('numQtd4', 'numPreco4', 'numSub4')"></td>
+                <td><input type="number" id="numSub4" class="sub" readonly></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>
+                    <select id="slc5" class="slc">
+                        <option value=""></option>
+                        <option value="X-tudo">X-Tudo</option>
+                        <option value="X-Calabresa">X-Calabresa</option>
+                        <option value="X-Bacon">X-Bacon</option>
+                        <option value="Cachorro Quente">Cachorro Quente</option>
+                        <option value="Hamburguer">Hambúrguer</option>
+                        <option value="Misto">Misto</option>
+                    </select>
+                </td>
+                <td><input type="number" min="0" id="numQtd5" class="qtd"
+                        onblur="calcSub('numQtd5', 'numPreco5', 'numSub5')"></td>
+                <td><input type="number" min="0" id="numPreco5" class="num"
+                        onblur="calcSub('numQtd5', 'numPreco5', 'numSub5')"></td>
+                <td><input type="number" id="numSub5" class="sub" readonly></td>
+            </tr>
+        </table>
+        <p id="total">TOTAL R$</p>
+        <br>
+        <hr><br>
+        <button type="button" onclick="calcTotal()">Calcular Total</button>
+        <button type="button" onclick="limpar()">Limpar Comanda</button>
+    </form>
+</body>
+
+</html>
